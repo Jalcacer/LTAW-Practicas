@@ -11,3 +11,8 @@ const path = require('path');
 const PORT = 9000;
 
 
+//-- Ahora si comenzamos con el server 
+const server = http.createServer((req, res) => {})
+server.listen(PORT);
+console.log("Server escuchando en puerto: " +PORT+"...");
+
