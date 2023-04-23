@@ -21,6 +21,19 @@ if(myurl.pathname == "/"){
     path = myurl.pathname;
 }
 
+file_extension = path.split(".")[1];
+path = "." + path;
+const type = {
+  "plain": "text/plain",
+  "html": "text/html",
+  "css": "text/css",
+  "jpg": "image/jpg",
+  "png": "image/png",
+};
+
+let mime = type[file_extension];
+
+
 server.listen(PORT);
 console.log("Server escuchando en puerto: " +PORT+"...");
 
