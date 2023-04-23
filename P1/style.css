@@ -4,48 +4,56 @@ body{
 
 .Cabecera{
     background-color: beige;
-    height: 200px;
+    height: 400px;
     text-align: center;
     color: black
 }
 
 .Ending{
     background-color: beige;
-    height: 250px;
+    height: 400px;
     text-align: center;
     color: black;
     margin-top: 7.8%;
 }
 
 .mini_escudo{
-    text-align: left;
+    
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 20%;
+    margin-left: 0px;
+    border-style: none;
 }
 
 #logotienda{
     position: absolute;
-    height: 150px;
+    height: 325px;
+    width: 400px;
     margin-left: 150px;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 #logo_tienda{
-    height: 200px;
+    height: 350px;
     cursor: pointer;
 }
 .acarrito{
     background-color: beige;
     position: absolute;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 5px;
     margin-right: 0px;
-    margin-left: 20%;
+    margin-left: 30%;
     border-style: none;
 }
 #carrito{
-    height: 150px;
+    height: 300px;
 }
 
 #logo{
-    height: 250px;
+    height: 400px;
     cursor: pointer;
 }
 
@@ -87,6 +95,11 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+.fotopie{
+    font-size: 80px;
+}
+
 
 
 
