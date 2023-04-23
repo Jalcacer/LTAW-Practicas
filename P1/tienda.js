@@ -12,7 +12,7 @@ const PORT = 9000;
 
 
 //-- Ahora si comenzamos con el server 
-const server = http.createServer((req, res) => {})
+const server = http.createServer((req, res) {
 let myurl = new URL (req.url, "http://" + req.headers["host"]);
 let path = "";
 if(myurl.pathname == "/"){
@@ -32,7 +32,21 @@ const type = {
 };
 
 let mime = type[file_extension];
-
+fs.readFile(path, function (err, data) {
+        if(err) {
+          res.writeHead(404, {'Content-Type': 'text/html'});
+          console.log("404 Not Found");
+          path = "front-end/error404.html";
+          data = fs.readFileSync(path);
+        }else {
+          res.writeHead(200, {'Content-Type': mime});
+          console.log("Recurso recibido: " + mime);
+          console.log("200 OK")
+        }
+        res.write(data);
+        res.end();
+      });
+    });  
 
 server.listen(PORT);
 console.log("Server escuchando en puerto: " +PORT+"...");
