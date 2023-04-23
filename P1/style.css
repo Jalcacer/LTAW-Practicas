@@ -49,5 +49,27 @@ body{
     cursor: pointer;
 }
 
+#carrito:hover{
+    cursor: pointer;
+    height: 85px;
+}
+
+#banner{
+    size: inherit;
+    text-align: center;
+    background-color: black;
+}
+
+.Contenido{
+    margin-top: 115px;
+    text-align: center;
+}
+
+.producto{
+    height: 180px;
+    margin-right: 0px;
+    opacity: 100%;
+}
+
 
 
