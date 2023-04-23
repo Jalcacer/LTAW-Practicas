@@ -11,7 +11,7 @@ body{
 
 .Ending{
     background-color: beige;
-    height: 200px;
+    height: 250px;
     text-align: center;
     color: black;
     margin-top: 7.8%;
@@ -21,11 +21,32 @@ body{
     text-align: left;
 }
 
-#logo_tienda{
+#logotienda{
     position: absolute;
-    height: 50px;
-    margin-left: 50px;
-    margin-top: 5px;
+    height: 150px;
+    margin-left: 150px;
+    margin-top: 20px;
+}
+#logo_tienda{
+    height: 200px;
+    cursor: pointer;
+}
+.acarrito{
+    background-color: beige;
+    position: absolute;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 20%;
+    border-style: none;
+}
+#carrito{
+    height: 150px;
+}
+
+#logo{
+    height: 250px;
+    cursor: pointer;
 }
 
 
