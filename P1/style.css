@@ -19,8 +19,13 @@ body{
 
 .mini_escudo{
     text-align: left;
-    width: 20px;
-    height: 20px;
+}
+
+#logo_tienda{
+    position: absolute;
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 5px;
 }
 
 
