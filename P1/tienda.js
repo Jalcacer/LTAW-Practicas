@@ -12,7 +12,7 @@ const PORT = 9000;
 
 
 //-- Ahora si comenzamos con el server 
-const server = http.createServer((req, res) {
+const server = http.createServer((req, res) => {
 let myurl = new URL (req.url, "http://" + req.headers["host"]);
 let path = "";
 if(myurl.pathname == "/"){
@@ -49,5 +49,5 @@ fs.readFile(path, function (err, data) {
     });  
 
 server.listen(PORT);
-console.log("Server escuchando en puerto: " +PORT+"...");
+console.log("Server de la tienda escuchando en puerto: " +PORT+"...");
 
