@@ -66,10 +66,17 @@ body{
 }
 
 .producto{
-    height: 180px;
+    height: 1500px;
     margin-right: 0px;
     opacity: 100%;
 }
+
+.producto:hover{
+    height: 1600px;
+    cursor: pointer;
+}
+
+
 
 
 
