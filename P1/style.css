@@ -2,7 +2,26 @@ body{
     background: linear-gradient(to right, #000000, #2e8b57);
 }
 
-.header{
+.Cabecera{
     background-color: beige;
-    height: 50px;
+    height: 200px;
+    text-align: center;
+    color: black
 }
+
+.Ending{
+    background-color: beige;
+    height: 200px;
+    text-align: center;
+    color: black;
+    margin-top: 7.8%;
+}
+
+.mini_escudo{
+    text-align: left;
+    width: 20px;
+    height: 20px;
+}
+
+
+
