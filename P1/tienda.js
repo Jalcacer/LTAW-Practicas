@@ -38,7 +38,7 @@ fs.readFile(path, function (err, data) {
         if(err) {
           res.writeHead(404, {'Content-Type': 'text/html'});
           console.log("404 Not Found");
-          path = "front-end/error404.html";
+          path = "front-end/error.html";
           data = fs.readFileSync(path);
         }else {
           res.writeHead(200, {'Content-Type': mime});
