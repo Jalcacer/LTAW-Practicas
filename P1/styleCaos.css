@@ -3,14 +3,14 @@ body{
 }
 
 .Cabecera{
-    background-color: beige;
+    background-color: white;
     height: 100px;
     text-align: center;
     color: black
 }
 
 .Ending{
-    background-color: beige;
+    background-color: white;
     height: 100px;
     text-align: center;
     color: black;
@@ -40,7 +40,7 @@ body{
     cursor: pointer;
 }
 .acarrito{
-    background-color: beige;
+    background-color: white;
     position: absolute;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -75,16 +75,12 @@ body{
 
 
 
-
-
-
 .boton{
-    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
-    color: white;
+    color: black;
     padding: 50px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255);
     border-radius: 150px;
     margin-left: 20px;
     margin-right: 20px;
@@ -94,39 +90,51 @@ body{
     font-size: 30px;
 }
 
-.Caos{
+.Horus{
  width: 250px;
- height: 150px;
+ height: 200px;
 }
 
-.Caos:hover{
-    height: 200px;
+.Horus:hover{
+    height: 300px;
     width: 300px;
     cursor: pointer;
 }
 
-.Marine{
+.abbadon{
     width: 250px;
-    height: 150px;
+    height: 200px;
 }
 
-.Marine:hover{
-    height: 200px;
+.abbadon:hover{
+    height: 300px;
     width: 300px;
     cursor: pointer;
 }
 
-.Imperial{
+.Lord{
     width: 250px;
-    height: 150px;
+    height: 200px;
 }
 
-.Imperial:hover{
-    height: 200px;
+.Lord:hover{
+    height: 300px;
     width: 300px;
     cursor: pointer;
 }
 
 
+.inline2{
+    margin-top: 4%;
+    display:flex; 
+    justify-content:space-around; 
+    align-items: center;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 19px;
+    color: white;
+    font-style: oblique;
+    border-radius: 15px;
 
+}
 
