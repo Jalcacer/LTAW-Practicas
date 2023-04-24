@@ -33,12 +33,12 @@ const type = {
   "png": "image/png",
 };
 
-let mime = type[file_extension];
+  let mime = type[file_extension];
 fs.readFile(path, function (err, data) {
         if(err) {
           res.writeHead(404, {'Content-Type': 'text/html'});
           console.log("404 Not Found");
-          path = "front-end/error.html";
+          path = "/error.html";
           data = fs.readFileSync(path);
         }else {
           res.writeHead(200, {'Content-Type': mime});
@@ -47,8 +47,9 @@ fs.readFile(path, function (err, data) {
         }
         res.write(data);
         res.end();
-      });
-    });  
+});
+
+});  
 
 server.listen(PORT);
 console.log("Server de la tienda escuchando en puerto: " +PORT+"...");
