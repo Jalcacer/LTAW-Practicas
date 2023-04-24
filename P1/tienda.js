@@ -14,7 +14,7 @@ const PORT = 9000;
 
 
 //-- Ahora si comenzamos con el server 
-const server = http.createServer((req, res) => {
+const server = http.createServer(function(req,res) {
 let myurl = new URL (req.url, "http://" + req.headers["host"]);
 let path = "";
 if(myurl.pathname == "/"){
