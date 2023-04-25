@@ -85,6 +85,10 @@ console.log("Petición recibida!");
     case 'js': 
       mimetype = "application/javascript";
       break;
+    //Archivo HTML
+    case 'html':
+      mimetype = "text/html";
+      break
   }
 
 
@@ -94,7 +98,7 @@ console.log("Petición recibida!");
     if (err) {
       res.statusCode = 404
       res.statusMessage = "Not Found"
-      petition = "front-end/error.html";
+      petition = "/error.html";
       data = fs.readFileSync(petition);
       res.setHeader('Content-Type', mimetype);
       res.write(data);
