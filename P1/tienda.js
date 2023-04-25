@@ -14,7 +14,40 @@ const PORT = 9000;
 
 
 //-- Ahora si comenzamos con el server 
+
+//-- Imprimo la info del server
+function print_info_req(req) {
+
+  console.log("");
+  console.log("Mensaje de solicitud");
+  console.log("====================");
+  console.log("Método: " + req.method);
+  console.log("Recurso: " + req.url);
+  console.log("Version: " + req.httpVersion)
+  console.log("Cabeceras: ");
+
+  //-- Recorrer todas las cabeceras disponibles
+  //-- imprimiendo su nombre y su valor
+  for (hname in req.headers)
+    console.log(`  * ${hname}: ${req.headers[hname]}`);
+
+  //-- Construir el objeto url con la url de la solicitud
+  const myURL = new URL(req.url, 'http://' + req.headers['host']);
+  console.log("URL completa: " + myURL.href);
+  console.log("  Ruta: " + myURL.pathname);
+}
+
 const server = http.createServer(function(req,res) {
+
+console.log("Petición recibida!");
+
+  //-- Mostrar informacion de la peticion
+  //print_info_req(req);
+
+  //-- Valores de la respuesta por defecto
+  let code = 200;
+  let code_msg = "OK";
+  
 let myurl = new URL (req.url, "http://" + req.headers["host"]);
 let path = "";
 if(myurl.pathname == "/"){
