@@ -63,10 +63,12 @@ console.log("Petición recibida!");
   }
 
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
+  resource = petition.split(".")[1];
+  //-- Se añade un punto para que el sistema pueda buscarlo y mostrarlo
+  petition = "." + petition;
+  console.log("Nombre del recurso servido: " + petition);
+  console.log("Extension del recurso: " + resource);
   
-
-
-
 
 
 
