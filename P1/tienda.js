@@ -68,7 +68,29 @@ console.log("Petición recibida!");
   petition = "." + petition;
   console.log("Nombre del recurso servido: " + petition);
   console.log("Extension del recurso: " + resource);
-  
+
+  //-- Generar la respusta en función de las variables
+  res.statusCode = code;
+  res.statusMessage = code_msg;
+
+  //-- Cambiar el mimetype en funcion de la extensión del recurso
+  switch (resource) {
+    //Hoja de estilos
+    case 'css': 
+      mimetype = "text/css";
+      break;
+    //Imagenes  
+    case 'jpg':
+    case 'png':
+    case 'jpeg':
+      mimetype = "image/" + resource;
+      break;
+    //Archivos Javascript
+    case 'js': 
+      mimetype = "application/javascript";
+      break;
+  }
+
 
 
 
