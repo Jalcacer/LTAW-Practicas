@@ -35,19 +35,17 @@ function print_info_req(req) {
   console.log("  Ruta: " + myURL.pathname);
 }
 
-const server = http.createServer(function(req,res) {
+const server = http.createServer((req,res) =>{
 
 console.log("Petición recibida!");
 
-  //-- Mostrar informacion de la peticion
-  //print_info_req(req);
 
   //-- Valores de la respuesta por defecto
   let code = 200;
   let code_msg = "OK";
 
   //-- Construir el objeto url con la url de la solicitud
-  let myurl = new URL (req.url, "http://" + req.headers["host"]);
+  const url = new URL(req.url, 'http://' + req.headers['host']);
   console.log("URL (del recurso solicitado): " + url.href)
   console.log("Ruta: ",url.pathname);
   
@@ -55,7 +53,7 @@ console.log("Petición recibida!");
   let mimetype = 'text/html';
 
   if (url.pathname == '/') {//-- Si se pide la pagina principal
-    petition = "/html/index.html"
+    petition = "/tienda.html"
   }else {//-- Si se pide cualquier otra cosa
       petition = url.pathname;
   }
@@ -96,7 +94,7 @@ console.log("Petición recibida!");
     if (err) {
       res.statusCode = 404
       res.statusMessage = "Not Found"
-      petition = "html/error.html";
+      petition = "/error.html";
       data = fs.readFileSync(petition);
       res.setHeader('Content-Type', mimetype);
       res.write(data);
