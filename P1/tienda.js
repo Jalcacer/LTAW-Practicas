@@ -62,7 +62,17 @@ console.log("Petición recibida!");
       petition = url.pathname;
   }
 
-  let mime = type[file_extension];
+  //-- Se guarda el tipo de recurso, separando el nombre de la extensión
+  
+
+
+
+
+
+
+
+
+
 fs.readFile(path, function (err, data) {
         if(err) {
           res.writeHead(404, {'Content-Type': 'text/html'});
