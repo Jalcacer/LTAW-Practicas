@@ -10,3 +10,10 @@ Para ejecutar la página web hemos de seguir los siguientes pasos:
 > 127.0.0.1:9000
 
 ** Documentación Técnica ** 
+
+La tienda cumple con las especificaciones básicas y no incluye mejoras:
+    **http** escucha asíncrona de peticiones 
+    **fs** lectura asíncrona de ficheros
+    **url** paso de peticiones del cliente al servidor
+
+>
