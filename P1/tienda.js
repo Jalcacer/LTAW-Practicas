@@ -92,27 +92,26 @@ console.log("Petición recibida!");
   }
 
 
-
-
-
-
-
-fs.readFile(path, function (err, data) {
-        if(err) {
-          res.writeHead(404, {'Content-Type': 'text/html'});
-          console.log("404 Not Found");
-          path = "/error.html";
-          data = fs.readFileSync(path);
-        }else {
-          res.writeHead(200, {'Content-Type': mime});
-          console.log("Recurso recibido: " + mime);
-          console.log("200 OK")
-        }
-        res.write(data);
-        res.end();
+  //-- Lectura asincrona de los recursos a mostrar en la pagina
+  fs.readFile(petition, (err, data) => {
+  console.log(resource);
+    if (err) {
+      res.statusCode = 404
+      res.statusMessage = "Not Found"
+      petition = "html/error.html";
+      data = fs.readFileSync(petition);
+      res.setHeader('Content-Type', mimetype);
+      res.write(data);
+      return res.end();
+    }
+  //-- Escribo la cabecera del mensaje y muestro la pagina solicitada
+  res.setHeader('Content-Type', mimetype);
+  res.write(data);
+  res.end();
+  });
 });
 
-});  
+
 
 server.listen(PORT);
 console.log("Server de la tienda escuchando en puerto: " +PORT+"...");
