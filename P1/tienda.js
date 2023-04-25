@@ -47,24 +47,20 @@ console.log("Petición recibida!");
   //-- Valores de la respuesta por defecto
   let code = 200;
   let code_msg = "OK";
-  
-let myurl = new URL (req.url, "http://" + req.headers["host"]);
-let path = "";
-if(myurl.pathname == "/"){
-    path += "/tienda.html";
-}else{
-    path = myurl.pathname;
-}
 
-file_extension = path.split(".")[1];
-path = "." + path;
-const type = {
-  "plain": "text/plain",
-  "html": "text/html",
-  "css": "text/css",
-  "jpg": "image/jpg",
-  "png": "image/png",
-};
+  //-- Construir el objeto url con la url de la solicitud
+  let myurl = new URL (req.url, "http://" + req.headers["host"]);
+  console.log("URL (del recurso solicitado): " + url.href)
+  console.log("Ruta: ",url.pathname);
+  
+  let path = "";
+  let mimetype = 'text/html';
+
+  if (url.pathname == '/') {//-- Si se pide la pagina principal
+    petition = "/html/index.html"
+  }else {//-- Si se pide cualquier otra cosa
+      petition = url.pathname;
+  }
 
   let mime = type[file_extension];
 fs.readFile(path, function (err, data) {
