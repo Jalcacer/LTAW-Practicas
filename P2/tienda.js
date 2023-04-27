@@ -10,6 +10,11 @@ const fs = require('fs');
 //elegimos el puerto desde el que el servidor va a escuchar (se pide el 9000)
 const PORT = 9000;
 
+//-- Nombre del fichero JSON a leer
+const FICHERO_JSON = "json/BDD.json"
+
+//-- Nombre del fichero JSON a escribir
+const FICHERO_JSON_OUT = "json/info.json"
 
 //-- Ahora si comenzamos con el server 
 
