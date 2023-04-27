@@ -1,0 +1,127 @@
+body{
+    background: linear-gradient(to right, #000000, #2e8b57);
+}
+
+.Cabecera{
+    background-color: beige;
+    height: 100px;
+    text-align: center;
+    color: black
+}
+
+.Ending{
+    background-color: beige;
+    height: 100px;
+    text-align: center;
+    color: black;
+    margin-top: 11%;
+}
+
+.mini_escudo{
+    
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 20%;
+    margin-left: 0px;
+    border-style: none;
+}
+
+#logotienda{
+    position: absolute;
+    height: 75px;
+    width: 100px;
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#logo_tienda{
+    height: 100px;
+    cursor: pointer;
+}
+.acarrito{
+    background-color: beige;
+    position: absolute;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 0px;
+    margin-left: 30%;
+    border-style: none;
+}
+#carrito{
+    height: 80px;
+}
+
+#logo{
+    height: 100px;
+    cursor: pointer;
+}
+
+#carrito:hover{
+    cursor: pointer;
+    height: 70px;
+}
+
+
+.Contenido{
+    margin-top: 115px;
+    text-align: center;
+}
+
+
+
+
+
+
+.boton{
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    color: white;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.fotopie{
+    font-size: 30px;
+}
+
+.Caos{
+ width: 250px;
+ height: 150px;
+}
+
+.Caos:hover{
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.Marine{
+    width: 250px;
+    height: 150px;
+}
+
+.Marine:hover{
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.Imperial{
+    width: 250px;
+    height: 150px;
+}
+
+.Imperial:hover{
+    height: 200px;
+    width: 300px;
+    cursor: pointer;
+}
+
+
+
+
