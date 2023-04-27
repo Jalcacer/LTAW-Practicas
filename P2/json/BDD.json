@@ -69,6 +69,14 @@
             "precio": "150.99€",
             "stock": "100"
         }
-        ]}
+        ]},
+    {
+        "pedidos":[{
+            "nombre usuario": "",
+                "dirección envío": "",
+                "número de la tarjeta": "",
+                "productos": ""
+        }]
+    }
     
 ]
