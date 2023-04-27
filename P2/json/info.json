@@ -1,0 +1,6 @@
+[
+    {"usuarios":[
+        {"nick":"root","pass":"123456","real":"Root","email":"root@root.com"},
+        {"nick":"jalcacer","pass":"123456","real":"Jorge Alcacer","email":"j.alcacer.dev@gmail.com"}]},
+
+]
