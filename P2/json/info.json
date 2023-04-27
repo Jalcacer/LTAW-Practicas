@@ -2,16 +2,21 @@
     {"usuarios":[
         {"nick":"root","pass":"123456","real":"Root","email":"root@root.com"},
         {"nick":"jalcacer","pass":"123456","real":"Jorge Alcacer","email":"j.alcacer.dev@gmail.com"}]},
-        {"productos":[
-            {"nombre":"Horus War Lord","descripcion":"No incluye pintura --- Mini de resina","precio":"120.99€","stock":"100"},
-            {"nombre":"Abbadon the despoiler","descripcion":"Incluye pintura --- Mini de plástico","precio":"Precio: 89.99€","stock":"200"},
-            {"nombre":"Lord Invocatus","descripcion":"No incluye pintura --- Mini de plástico","precio":"54.99€","stock":"250"},
+    {"productos":[
+        {"nombre":"Horus War Lord","descripcion":"No incluye pintura --- Mini de resina","precio":"120.99€","stock":"100"},
+        {"nombre":"Abbadon the despoiler","descripcion":"Incluye pintura --- Mini de plástico","precio":"Precio: 89.99€","stock":"200"},
+        {"nombre":"Lord Invocatus","descripcion":"No incluye pintura --- Mini de plástico","precio":"54.99€","stock":"250"},
 
-            {"nombre":"Lion' El","descripcion":"No incluye pintura --- Mini de resina","precio":"120.99€","stock":"100"},
-            {"nombre":"Robute Guilliman","descripcion":"Incluye pintura --- Mini de plástico","precio":"Precio: 89.99€","stock":"200"},
-            {"nombre":"Venerable Dreadnought","descripcion":"No incluye pintura --- Mini de plástico","precio":"54.99€","stock":"250"},
+        {"nombre":"Lion' El","descripcion":"No incluye pintura --- Mini de resina","precio":"120.99€","stock":"100"},
+        {"nombre":"Robute Guilliman","descripcion":"Incluye pintura --- Mini de plástico","precio":"Precio: 89.99€","stock":"200"},
+        {"nombre":"Venerable Dreadnought","descripcion":"No incluye pintura --- Mini de plástico","precio":"54.99€","stock":"250"},
 
-            {"nombre":"Caballero del Caos","descripcion":"No incluye pintura ---  Mini XXL de resina","precio":"150.99€","stock":"100"},
-            {"nombre":"Caballeros (ambos bandos)","descripcion":"Incluye pintura --- MiniS XL de plástico","precio":"Precio: 70€","stock":"70"},
-            {"nombre":"Caballero Valeroso","descripcion":"No incluye pintura --- Mini  XXL de resina","precio":"150.99€","stock":"100"}]}
+        {"nombre":"Caballero del Caos","descripcion":"No incluye pintura ---  Mini XXL de resina","precio":"150.99€","stock":"100"},
+        {"nombre":"Caballeros (ambos bandos)","descripcion":"Incluye pintura --- MiniS XL de plástico","precio":"Precio: 70€","stock":"70"},
+        {"nombre":"Caballero Valeroso","descripcion":"No incluye pintura --- Mini  XXL de resina","precio":"150.99€","stock":"100"}]},
+
+    {"pedidos":[
+        {"nombre usuario":"","dirección envío":"","número de la tarjeta":"","productos":""},
+        {"nombre usuario":"jalcacer","dirección envío":"Alk","número de la tarjeta":"202122","productos":"Horus War Lord, Lion' El"}]}
+
 ]
