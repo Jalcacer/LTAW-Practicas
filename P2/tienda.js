@@ -16,6 +16,13 @@ const FICHERO_JSON = "json/BDD.json"
 //-- Nombre del fichero JSON a escribir
 const FICHERO_JSON_OUT = "json/info.json"
 
+
+//-- Leer el fichero JSON
+const tienda_json = fs.readFileSync(FICHERO_JSON);
+
+//-- Crear la estructura tienda a partir del contenido del fichero
+const tienda = JSON.parse(tienda_json);
+
 //-- Ahora si comenzamos con el server 
 
 //-- Imprimo la info del server
