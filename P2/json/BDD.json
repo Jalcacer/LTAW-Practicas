@@ -32,42 +32,6 @@
             "descripcion":"No incluye pintura --- Mini de plástico",
             "precio": "54.99€",
             "stock": "250"
-        },
-        {
-            "nombre": "Lion' El",
-            "descripcion":"No incluye pintura --- Mini de resina",
-            "precio": "120.99€",
-            "stock": "200" 
-        },
-        {
-            "nombre": "Robute Guilliman",
-            "descripcion":"Incluye pintura --- Mini de plástico",
-            "precio": "89.99€",
-            "stock": "200"  
-        },
-        {
-            "nombre": "Venerable Dreadnought",
-            "descripcion":"No incluye pintura --- Mini de plástico",
-            "precio": "54.99€",
-            "stock": "250"
-        },
-        {
-            "nombre": "Caballero del Caos",
-            "descripcion":"No incluye pintura ---  Mini XXL de resina",
-            "precio": "150.99€",
-            "stock": "100"
-        },
-        {
-            "nombre": "Caballeros (ambos bandos)",
-            "descripcion":"Incluye pintura --- MiniS XL de plástico",
-            "precio": "70€",
-            "stock": "50"
-        },
-        {
-            "nombre": "Caballero Valeroso",
-            "descripcion":"No incluye pintura --- Mini  XXL de resina",
-            "precio": "150.99€",
-            "stock": "100"
         }
         ]},
     {
