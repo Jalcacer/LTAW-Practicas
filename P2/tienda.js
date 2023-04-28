@@ -65,7 +65,7 @@ console.log("Petición recibida!");
   let mimetype = 'text/html';
 
   if (url.pathname == '/') {//-- Si se pide la pagina principal
-    petition = "/tienda.html"
+    petition = "/Tienda.html"
   }else {//-- Si se pide cualquier otra cosa
       petition = url.pathname;
   }
