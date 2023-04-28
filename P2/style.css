@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(to right, #000000, #2e8b57);
+    background-color:  #2e8b57;
 }
 
 .Cabecera{
@@ -104,7 +104,9 @@ body{
 }
 
 
-
+.forma1{
+    text-align: center;
+}
 
 
 
