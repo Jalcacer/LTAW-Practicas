@@ -124,6 +124,7 @@ body{
 }
 
 
+
 .inline2{
     margin-top: 4%;
     display:flex; 
@@ -138,3 +139,19 @@ body{
 
 }
 
+.alacesta{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    color: black;
+    padding: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 150px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.alacesta:hover{
+    height: 170px;
+    width: 170px;
+    cursor: pointer;
+}
