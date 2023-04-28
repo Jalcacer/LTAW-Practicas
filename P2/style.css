@@ -73,11 +73,7 @@ body{
     text-align: center;
 }
 
-
-
-
 .boton{
-    
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
     color: white;
@@ -87,6 +83,8 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
+
+
 
 .fotopie{
     font-size: 30px;
