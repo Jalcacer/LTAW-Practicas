@@ -103,27 +103,9 @@ body{
     cursor: pointer;
 }
 
-.Marine{
-    width: 250px;
-    height: 150px;
-}
 
-.Marine:hover{
-    height: 200px;
-    width: 300px;
-    cursor: pointer;
-}
 
-.Imperial{
-    width: 250px;
-    height: 150px;
-}
 
-.Imperial:hover{
-    height: 200px;
-    width: 300px;
-    cursor: pointer;
-}
 
 
 
