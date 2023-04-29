@@ -35,12 +35,13 @@
         }
         ]},
     {
-        "pedidos":[{
-                "nombre usuario": "",
-                "dirección envío": "",
-                "número de la tarjeta": "",
-                "productos": ""
-        }]
+    "pedidos":  [   {
+                        "nombre usuario": "",
+                        "dirección envío": "",
+                        "número de la tarjeta": "",
+                        "productos": ""
+                    }   
+                ]
     }
     
 ]

@@ -6,10 +6,10 @@ const fs = require('fs');
 const PUERTO = 9000;
 
 //-- Nombre del fichero JSON a leer
-const FICHERO_JSON = "json/tienda.json"
+const FICHERO_JSON = "tienda.json"
 
 //-- Nombre del fichero JSON a escribir
-const FICHERO_JSON_OUT = "json/pedidos.json"
+const FICHERO_JSON_OUT = "pedidos.json"
 
 
 //-- Leer el fichero JSON
