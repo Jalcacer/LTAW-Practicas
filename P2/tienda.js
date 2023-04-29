@@ -200,28 +200,51 @@ console.log("Petición recibida!");
   info = tienda[1]['productos'][0]['stock'];
   golden_supreme = golden_supreme.replace("STOCK", info);
 
- //Abbadon
- let Abbadon_despoiler = Abbadon;
- info = tienda[1]['productos'][1]['nombre'];
- granny_smith = granny_smith.replace("NOMBRE", info);
- info = tienda[1]['productos'][1]['descripcion'];
- granny_smith = granny_smith.replace("DESCRIPCION", info);
- info = tienda[1]['productos'][1]['precio'];
- granny_smith = granny_smith.replace("PRECIO", info);
- info = tienda[1]['productos'][1]['stock'];
- granny_smith = granny_smith.replace("STOCK", info);
+  //Abbadon
+  let Abbadon_despoiler = Abbadon;
+  info = tienda[1]['productos'][1]['nombre'];
+  granny_smith = granny_smith.replace("NOMBRE", info);
+  info = tienda[1]['productos'][1]['descripcion'];
+  granny_smith = granny_smith.replace("DESCRIPCION", info);
+  info = tienda[1]['productos'][1]['precio'];
+  granny_smith = granny_smith.replace("PRECIO", info);
+  info = tienda[1]['productos'][1]['stock'];
+  granny_smith = granny_smith.replace("STOCK", info);
 
 
- //Lord
- let Lord_invocatus= Lord;
- info = tienda[1]['productos'][2]['nombre'];
- red_delicious = red_delicious.replace("NOMBRE", info);
- info = tienda[1]['productos'][2]['descripcion'];
- red_delicious = red_delicious.replace("DESCRIPCION", info);
- info = tienda[1]['productos'][2]['precio'];
- red_delicious = red_delicious.replace("PRECIO", info);
- info = tienda[1]['productos'][2]['stock'];
- red_delicious = red_delicious.replace("STOCK", info)
+  //Lord
+  let Lord_invocatus= Lord;
+  info = tienda[1]['productos'][2]['nombre'];
+  red_delicious = red_delicious.replace("NOMBRE", info);
+  info = tienda[1]['productos'][2]['descripcion'];
+  red_delicious = red_delicious.replace("DESCRIPCION", info);
+  info = tienda[1]['productos'][2]['precio'];
+  red_delicious = red_delicious.replace("PRECIO", info);
+  info = tienda[1]['productos'][2]['stock'];
+  red_delicious = red_delicious.replace("STOCK", info)
+
+
+  //-- Entrega de formulario
+  let user = FORMULARIO_LOGIN;
+  let user_cookie = get_user(req);
+
+  //-- Reemplazar en "logueado.html"
+  user = RESPUESTA_LOGIN.replace("NOMBRE", nombre_user);
+  let html_extra = "";
+  let html_extra_condicion = "";
+
+  if (nombre_user == login1_BD && pass == pass1_BD || nombre_user == login2_BD && pass == pass2_BD) {
+    html_extra = "<h2>Está registrad@</h2>";
+    html_extra_condicion = "<h2>¡A comprar!</h2>";
+    //-- Login correcto --> almaceno cookie
+    console.log("------------------------------",nombre_user);
+    res.setHeader('Set-Cookie', "user=" + nombre_user);
+  } else {
+    html_extra = "<h2>Usuario y/o contraseña incorrectos!</h2>";
+  }
+  
+  user = user.replace("HTML_EXTRA", html_extra);
+  user = user.replace("HTML_EXTRA_CONDICION", html_extra_condicion);
 
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
