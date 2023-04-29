@@ -189,7 +189,40 @@ console.log("Petición recibida!");
   let login2_BD = tienda[0]['usuarios'][1]['nick'];
   let pass2_BD = tienda[0]['usuarios'][1]['pass'];
 
-  
+  //Horus
+  let Horus_war = Horus;
+  info = tienda[1]['productos'][0]['nombre'];
+  golden_supreme = golden_supreme.replace("NOMBRE", info);
+  info = tienda[1]['productos'][0]['descripcion'];
+  golden_supreme = golden_supreme.replace("DESCRIPCION", info);
+  info = tienda[1]['productos'][0]['precio'];
+  golden_supreme = golden_supreme.replace("PRECIO", info);
+  info = tienda[1]['productos'][0]['stock'];
+  golden_supreme = golden_supreme.replace("STOCK", info);
+
+ //Abbadon
+ let Abbadon_despoiler = Abbadon;
+ info = tienda[1]['productos'][1]['nombre'];
+ granny_smith = granny_smith.replace("NOMBRE", info);
+ info = tienda[1]['productos'][1]['descripcion'];
+ granny_smith = granny_smith.replace("DESCRIPCION", info);
+ info = tienda[1]['productos'][1]['precio'];
+ granny_smith = granny_smith.replace("PRECIO", info);
+ info = tienda[1]['productos'][1]['stock'];
+ granny_smith = granny_smith.replace("STOCK", info);
+
+
+ //Lord
+ let Lord_invocatus= Lord;
+ info = tienda[1]['productos'][2]['nombre'];
+ red_delicious = red_delicious.replace("NOMBRE", info);
+ info = tienda[1]['productos'][2]['descripcion'];
+ red_delicious = red_delicious.replace("DESCRIPCION", info);
+ info = tienda[1]['productos'][2]['precio'];
+ red_delicious = red_delicious.replace("PRECIO", info);
+ info = tienda[1]['productos'][2]['stock'];
+ red_delicious = red_delicious.replace("STOCK", info)
+
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
   //-- Se añade un punto para que el sistema pueda buscarlo y mostrarlo
