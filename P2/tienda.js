@@ -242,9 +242,18 @@ console.log("Petición recibida!");
   } else {
     html_extra = "<h2>Usuario y/o contraseña incorrectos!</h2>";
   }
-  
+
   user = user.replace("HTML_EXTRA", html_extra);
   user = user.replace("HTML_EXTRA_CONDICION", html_extra_condicion);
+
+  let carrito = ALACESTA;
+  let carro = "";
+  let carrear = get_carrito(req);
+
+
+  let direccion = url.searchParams.get('direccion');
+  let tarjeta = url.searchParams.get('tarjeta');
+
 
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
