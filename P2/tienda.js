@@ -198,7 +198,7 @@ console.log("Petición recibida!");
   info = tienda[1]['productos'][0]['precio'];
   Horus_war = Horus_war.replace("PRECIO", info);
   info = tienda[1]['productos'][0]['stock'];
-  Horus_war = Horus_war.replace("STOCK", info);_
+  Horus_war = Horus_war.replace("STOCK", info);
 
   //Abbadon
   let Abbadon_despoiler = Abbadon;
