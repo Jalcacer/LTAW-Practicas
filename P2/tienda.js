@@ -45,7 +45,7 @@ const Lord = fs.readFileSync('Lord.html', 'utf-8');
 const FORMULARIO_LOGIN = fs.readFileSync('login.html','utf-8');
 
 //-- Respuesta login
-const RESPUESTA_LOGIN = fs.readFileSync('html/logueado.html','utf-8');
+const RESPUESTA_LOGIN = fs.readFileSync('logueado.html','utf-8');
 
 
 //-- Ahora si comenzamos con el server 
@@ -254,7 +254,7 @@ console.log("Petición recibida!");
   let direccion = url.searchParams.get('direccion');
   let tarjeta = url.searchParams.get('tarjeta');
 
-  
+
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
   //-- Se añade un punto para que el sistema pueda buscarlo y mostrarlo
