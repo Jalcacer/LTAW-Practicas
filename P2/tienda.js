@@ -23,6 +23,18 @@ const tienda_json = fs.readFileSync(FICHERO_JSON);
 //-- Crear la estructura tienda a partir del contenido del fichero
 const tienda = JSON.parse(tienda_json);
 
+//--Pagina principal
+const INDEX = fs.readFileSync('Tienda.html', 'utf-8');
+
+//-- Página para finalizar compra
+const COMPRA = fs.readFileSync('compra.html', 'utf-8');
+
+//--Alcarro
+const ALACESTA = fs.readFileSync('alacesta.html', 'utf-8');
+
+//--Compra completada
+const COMPRA_COMPLETADA = fs.readFileSync('compracompleta.html', 'utf-8');
+
 //-- Ahora si comenzamos con el server 
 
 //-- Imprimo la info del server
