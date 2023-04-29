@@ -139,6 +139,23 @@ function get_user(req) {
 }
 
 
+//-- Función de los productos
+function get_productos(carrear){
+  let productosCarro = carrear.split(",");
+  let tamaño = productosCarro.length;
+  let tiposProd = ["Horus War Lord",0, "Abbadon the despoiler",0, "Lord Invocatus",0];
+  for (let i = 0; i < tamaño; i++) {
+      if(productosCarro[i].includes("Horus War Lord")){
+        tiposProd[1] = tiposProd[1]+1;
+      }else if(productosCarro[i].includes("Abbadon the despoiler")){
+        tiposProd[3] = tiposProd[3]+1;
+      }else if(productosCarro[i].includes("Lord Invocatus")){
+        tiposProd[5] = tiposProd[5]+1;
+      }
+  }
+  return tiposProd;
+}
+
 
 //-- Ahora si comenzamos con el server 
 const server = http.createServer((req,res) =>{
