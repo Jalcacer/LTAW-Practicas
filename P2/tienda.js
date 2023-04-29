@@ -35,6 +35,13 @@ const ALACESTA = fs.readFileSync('alacesta.html', 'utf-8');
 //--Compra completada
 const COMPRA_COMPLETADA = fs.readFileSync('compracompleta.html', 'utf-8');
 
+
+//--Productos
+const Horus = fs.readFileSync('Horus.html', 'utf-8');
+const Abbadon = fs.readFileSync('Abbadon.html', 'utf-8');
+const Lord = fs.readFileSync('Lord.html', 'utf-8');
+
+
 //-- Ahora si comenzamos con el server 
 
 //-- Imprimo la info del server
