@@ -192,36 +192,36 @@ console.log("Petición recibida!");
   //Horus
   let Horus_war = Horus;
   info = tienda[1]['productos'][0]['nombre'];
-  golden_supreme = golden_supreme.replace("NOMBRE", info);
+  Horus_war = Horus_war.replace("NOMBRE", info);
   info = tienda[1]['productos'][0]['descripcion'];
-  golden_supreme = golden_supreme.replace("DESCRIPCION", info);
+  Horus_war = Horus_war.replace("DESCRIPCION", info);
   info = tienda[1]['productos'][0]['precio'];
-  golden_supreme = golden_supreme.replace("PRECIO", info);
+  Horus_war = Horus_war.replace("PRECIO", info);
   info = tienda[1]['productos'][0]['stock'];
-  golden_supreme = golden_supreme.replace("STOCK", info);
+  Horus_war = Horus_war.replace("STOCK", info);_
 
   //Abbadon
   let Abbadon_despoiler = Abbadon;
   info = tienda[1]['productos'][1]['nombre'];
-  granny_smith = granny_smith.replace("NOMBRE", info);
+  Abbadon_despoiler = Abbadon_despoiler.replace("NOMBRE", info);
   info = tienda[1]['productos'][1]['descripcion'];
-  granny_smith = granny_smith.replace("DESCRIPCION", info);
+  Abbadon_despoiler = Abbadon_despoiler.replace("DESCRIPCION", info);
   info = tienda[1]['productos'][1]['precio'];
-  granny_smith = granny_smith.replace("PRECIO", info);
+  Abbadon_despoiler = Abbadon_despoiler.replace("PRECIO", info);
   info = tienda[1]['productos'][1]['stock'];
-  granny_smith = granny_smith.replace("STOCK", info);
+  Abbadon_despoiler = Abbadon_despoiler.replace("STOCK", info);
 
 
   //Lord
   let Lord_invocatus= Lord;
   info = tienda[1]['productos'][2]['nombre'];
-  red_delicious = red_delicious.replace("NOMBRE", info);
+  Lord_invocatus = Lord_invocatus.replace("NOMBRE", info);
   info = tienda[1]['productos'][2]['descripcion'];
-  red_delicious = red_delicious.replace("DESCRIPCION", info);
+  Lord_invocatus = Lord_invocatus.replace("DESCRIPCION", info);
   info = tienda[1]['productos'][2]['precio'];
-  red_delicious = red_delicious.replace("PRECIO", info);
+  Lord_invocatus = Lord_invocatus.replace("PRECIO", info);
   info = tienda[1]['productos'][2]['stock'];
-  red_delicious = red_delicious.replace("STOCK", info)
+  Lord_invocatus = Lord_invocatus.replace("STOCK", info)
 
 
   //-- Entrega de formulario
