@@ -179,7 +179,17 @@ console.log("Petición recibida!");
   }else {//-- Si se pide cualquier otra cosa
       petition = url.pathname;
   }
+  let info;
 
+  //Logins
+  let nombre_user = url.searchParams.get('usuario');
+  let pass = url.searchParams.get('contraseña');
+  let login1_BD = tienda[0]['usuarios'][0]['nick'];
+  let pass1_BD = tienda[0]['usuarios'][0]['pass'];
+  let login2_BD = tienda[0]['usuarios'][1]['nick'];
+  let pass2_BD = tienda[0]['usuarios'][1]['pass'];
+
+  
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
   //-- Se añade un punto para que el sistema pueda buscarlo y mostrarlo
