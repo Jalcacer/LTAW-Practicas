@@ -133,7 +133,7 @@ function get_productos(carrear){
   let tamaño = productosCarro.length;
   let tiposProd = ["Horus War Lord",0, "Abbadon the despoiler",0, "Lord Invocatus",0];
   for (let i = 0; i < tamaño; i++) {
-      if(productosCarro[i].includes("Horus war Lord")){
+      if(productosCarro[i].includes("Horus War Lord")){
         tiposProd[1] = tiposProd[1]+1;
       }else if(productosCarro[i].includes("Abbadon the despoiler")){
         tiposProd[3] = tiposProd[3]+1;
