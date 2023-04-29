@@ -41,6 +41,12 @@ const Horus = fs.readFileSync('Horus.html', 'utf-8');
 const Abbadon = fs.readFileSync('Abbadon.html', 'utf-8');
 const Lord = fs.readFileSync('Lord.html', 'utf-8');
 
+//--Formulario
+const FORMULARIO_LOGIN = fs.readFileSync('login.html','utf-8');
+
+//-- Respuesta login
+const RESPUESTA_LOGIN = fs.readFileSync('html/logueado.html','utf-8');
+
 
 //-- Ahora si comenzamos con el server 
 
