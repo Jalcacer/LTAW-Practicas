@@ -254,7 +254,7 @@ console.log("Petición recibida!");
   let direccion = url.searchParams.get('direccion');
   let tarjeta = url.searchParams.get('tarjeta');
 
-
+  
   //-- Se guarda el tipo de recurso, separando el nombre de la extensión
   resource = petition.split(".")[1];
   //-- Se añade un punto para que el sistema pueda buscarlo y mostrarlo
