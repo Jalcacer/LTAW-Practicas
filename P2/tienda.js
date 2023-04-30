@@ -285,13 +285,13 @@ const server = http.createServer((req, res)=>{
             res.write(data);
             return res.end();
         }else if(petition == "./html/Horus.html"){
-            data = golden_supreme;
+            data = Horus_war;
             tipoProd = "Horus War Lord";
         }else if(petition == "./html/Lord.html"){
-            data = granny_smith;
+            data = Lord_Invocatus;
             tipoProd = "Lord Invocatus";
         }else if(petition == "./html/Abbadon.html"){
-            data = red_delicious;
+            data = Abbadon_despoiler;
             tipoProd = "Abbadon the despoiler";
         }else if(petition == "./html/logueado.html"){
             data = user;
