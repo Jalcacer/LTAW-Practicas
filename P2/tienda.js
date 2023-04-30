@@ -3,7 +3,7 @@ const http = require('http');
 const fs = require('fs');
 
 //--Definir puertos
-const PUERTO = 9090;
+const PUERTO = 9000;
 
 //-- Nombre del fichero JSON a leer
 const FICHERO_JSON = "json/tienda.json"
@@ -32,9 +32,9 @@ const COMPRA_COMPLETADA = fs.readFileSync('html/compracompletada.html', 'utf-8')
 
 
 //--Productos
-const goldensupreme = fs.readFileSync('html/goldensupreme.html', 'utf-8');
-const grannysmith = fs.readFileSync('html/grannysmith.html', 'utf-8');
-const reddelicious = fs.readFileSync('html/reddelicious.html', 'utf-8');
+const Horus = fs.readFileSync('html/Horus.html', 'utf-8');
+const Lord = fs.readFileSync('html/Lord.html', 'utf-8');
+const Abbadon = fs.readFileSync('html/Abbadon.html', 'utf-8');
 
 //--Formulario
 const FORMULARIO_LOGIN = fs.readFileSync('html/login.html','utf-8');
@@ -179,38 +179,38 @@ const server = http.createServer((req, res)=>{
     let pass2_BD = tienda[0]['usuarios'][1]['pass'];
 
     //Golden Supreme
-    let golden_supreme = goldensupreme;
+    let Horus_war = Horus;
     info = tienda[1]['productos'][0]['nombre'];
-    golden_supreme = golden_supreme.replace("NOMBRE", info);
+    Horus_war = Horus_war.replace("NOMBRE", info);
     info = tienda[1]['productos'][0]['descripcion'];
-    golden_supreme = golden_supreme.replace("DESCRIPCION", info);
+    Horus_war = Horus_war.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][0]['precio'];
-    golden_supreme = golden_supreme.replace("PRECIO", info);
+    Horus_war = Horus_war.replace("PRECIO", info);
     info = tienda[1]['productos'][0]['stock'];
-    golden_supreme = golden_supreme.replace("STOCK", info);
+    Horus_war = Horus_war.replace("STOCK", info);
 
     //Granny Smith
-    let granny_smith = grannysmith;
+    let Lord_Invocatus = Lord;
     info = tienda[1]['productos'][1]['nombre'];
-    granny_smith = granny_smith.replace("NOMBRE", info);
+    Lord_Invocatus = Lord_Invocatus.replace("NOMBRE", info);
     info = tienda[1]['productos'][1]['descripcion'];
-    granny_smith = granny_smith.replace("DESCRIPCION", info);
+    Lord_Invocatus = Lord_Invocatus.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][1]['precio'];
-    granny_smith = granny_smith.replace("PRECIO", info);
+    Lord_Invocatus = Lord_Invocatus.replace("PRECIO", info);
     info = tienda[1]['productos'][1]['stock'];
-    granny_smith = granny_smith.replace("STOCK", info);
+    Lord_Invocatus = Lord_Invocatus.replace("STOCK", info);
 
 
     //Red Delicious
-    let red_delicious = reddelicious;
+    let Abbadon_despoiler = Abbadon;
     info = tienda[1]['productos'][2]['nombre'];
-    red_delicious = red_delicious.replace("NOMBRE", info);
+    Abbadon_despoiler = Abbadon_despoiler.replace("NOMBRE", info);
     info = tienda[1]['productos'][2]['descripcion'];
-    red_delicious = red_delicious.replace("DESCRIPCION", info);
+    Abbadon_despoiler = Abbadon_despoiler.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][2]['precio'];
-    red_delicious = red_delicious.replace("PRECIO", info);
+    Abbadon_despoiler = Abbadon_despoiler.replace("PRECIO", info);
     info = tienda[1]['productos'][2]['stock'];
-    red_delicious = red_delicious.replace("STOCK", info);
+    Abbadon_despoiler = Abbadon_despoiler.replace("STOCK", info);
 
     //-- Entrega de formulario
     let user = FORMULARIO_LOGIN;
@@ -284,15 +284,15 @@ const server = http.createServer((req, res)=>{
             res.setHeader('Content-Type', mimetype);
             res.write(data);
             return res.end();
-        }else if(petition == "./html/goldensupreme.html"){
+        }else if(petition == "./html/Horus.html"){
             data = golden_supreme;
-            tipoProd = "Golden Supreme";
-        }else if(petition == "./html/grannysmith.html"){
+            tipoProd = "Horus War Lord";
+        }else if(petition == "./html/Lord.html"){
             data = granny_smith;
-            tipoProd = "Granny Smith";
-        }else if(petition == "./html/reddelicious.html"){
+            tipoProd = "Lord Invocatus";
+        }else if(petition == "./html/Abbadon.html"){
             data = red_delicious;
-            tipoProd = "Red Delicious";
+            tipoProd = "Abbadon the despoiler";
         }else if(petition == "./html/logueado.html"){
             data = user;
         }else if (petition == './html/alcarro.html'){
