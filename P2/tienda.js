@@ -180,7 +180,7 @@ const server = http.createServer((req, res)=>{
     let login2_BD = tienda[0]['usuarios'][1]['nick'];
     let pass2_BD = tienda[0]['usuarios'][1]['pass'];
 
-    //Golden Supreme
+    //hORUS
     let Horus_war = Horus;
     info = tienda[1]['productos'][0]['nombre'];
     Horus_war = Horus_war.replace("NOMBRE", info);
@@ -191,7 +191,7 @@ const server = http.createServer((req, res)=>{
     info = tienda[1]['productos'][0]['stock'];
     Horus_war = Horus_war.replace("STOCK", info);
 
-    //Granny Smith
+    //Abbadon
     let Abbadon_despoiler= Abbadon;
     info = tienda[1]['productos'][1]['nombre'];
     Abbadon_despoiler = Abbadon_despoiler.replace("NOMBRE", info);
@@ -203,7 +203,7 @@ const server = http.createServer((req, res)=>{
     Abbadon_despoiler = Abbadon_despoiler.replace("STOCK", info);
 
 
-    //Red Delicious
+    //Lord
     let Lord_Invocatus = Lord;
     info = tienda[1]['productos'][2]['nombre'];
     Lord_Invocatus = Lord_Invocatus.replace("NOMBRE", info);
