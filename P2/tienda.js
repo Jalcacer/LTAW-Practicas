@@ -25,7 +25,7 @@ const INDEX = fs.readFileSync('Tienda.html', 'utf-8');
 const COMPRA = fs.readFileSync('compra.html', 'utf-8');
 
 //--Alcarro
-const ALCARRO = fs.readFileSync('alacesta.html', 'utf-8');
+const ALCARRO = fs.readFileSync('alcarro.html', 'utf-8');
 
 //--Compra completada
 const COMPRA_COMPLETADA = fs.readFileSync('compracompleta.html', 'utf-8');
