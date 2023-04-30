@@ -130,13 +130,13 @@ function get_user(req) {
 function get_productos(carrear){
   let productosCarro = carrear.split(",");
   let tamaño = productosCarro.length;
-  let tiposProd = ["Golden Supreme",0, "Red Delicious",0, "Granny Smith",0];
+  let tiposProd = ["Horus War Lord",0, "Abbadon the despoiler",0, "Lord Invocatus",0];
   for (let i = 0; i < tamaño; i++) {
-      if(productosCarro[i].includes("Golden Supreme")){
+      if(productosCarro[i].includes("Horus War Lord")){
         tiposProd[1] = tiposProd[1]+1;
-      }else if(productosCarro[i].includes("Red Delicious")){
+      }else if(productosCarro[i].includes("Abbadon the despoiler")){
         tiposProd[3] = tiposProd[3]+1;
-      }else if(productosCarro[i].includes("Granny Smith")){
+      }else if(productosCarro[i].includes("Lord invocatus")){
         tiposProd[5] = tiposProd[5]+1;
       }
   }

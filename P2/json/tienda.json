@@ -7,29 +7,29 @@
                         "email": "root@root.com"
                     },  
                     {
-                        "nick": "jgozalo",
+                        "nick": "jalcacer",
                         "pass": "123456",
-                        "real": "Javier Gozalo",
-                        "email": "jgozalo@gmail.com"
+                        "real": "Jorge Alcacer",
+                        "email": "j.alcacer.dev@gmail.com"
                     }
                 ]},
     {
     "productos": [  {
-                        "nombre": "Golden Supreme",
-                        "descripcion":"Color: Amarillo",
-                        "precio": "0.85",
+                        "nombre": "Horus War Lord",
+                        "descripcion":"Mini de resina, no incluye pinturas",
+                        "precio": "149.99",
                         "stock": "100"
                     }, 
                     {
-                        "nombre": "Granny Smith",
-                        "descripcion":"Color: Verde",
-                        "precio": "0.65",
-                        "stock": "250"
+                        "nombre": "Lord Invocatus",
+                        "descripcion":"Mini de plástico, incluye pinturas",
+                        "precio": "70",
+                        "stock": "150"
                     }, 
                     {
-                        "nombre": "Red Delicious",
-                        "descripcion":"Color: Rojo",
-                        "precio": "0.5",
+                        "nombre": "Abbadon the despoiler",
+                        "descripcion":"Mini de plástico, no incluye pinturas",
+                        "precio": "99.99",
                         "stock": "200"
                     }
                 ]},
