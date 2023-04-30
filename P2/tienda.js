@@ -3,13 +3,13 @@ const http = require('http');
 const fs = require('fs');
 
 //--Definir puertos
-const PUERTO = 9000;
+const PUERTO = 9090;
 
 //-- Nombre del fichero JSON a leer
-const FICHERO_JSON = "tienda.json"
+const FICHERO_JSON = "json/tienda.json"
 
 //-- Nombre del fichero JSON a escribir
-const FICHERO_JSON_OUT = "pedidos.json"
+const FICHERO_JSON_OUT = "json/pedidos.json"
 
 
 //-- Leer el fichero JSON
@@ -19,28 +19,28 @@ const tienda_json = fs.readFileSync(FICHERO_JSON);
 const tienda = JSON.parse(tienda_json);
 
 //--Pagina principal
-const INDEX = fs.readFileSync('Tienda.html', 'utf-8');
+const INDEX = fs.readFileSync('html/index.html', 'utf-8');
 
 //-- Página para finalizar compra
-const COMPRA = fs.readFileSync('compra.html', 'utf-8');
+const COMPRA = fs.readFileSync('html/compra.html', 'utf-8');
 
 //--Alcarro
-const ALCARRO = fs.readFileSync('alcarro.html', 'utf-8');
+const ALCARRO = fs.readFileSync('html/alcarro.html', 'utf-8');
 
 //--Compra completada
-const COMPRA_COMPLETADA = fs.readFileSync('compracompleta.html', 'utf-8');
+const COMPRA_COMPLETADA = fs.readFileSync('html/compracompletada.html', 'utf-8');
 
 
 //--Productos
-const Horus = fs.readFileSync('Horus.html', 'utf-8');
-const Abbadon= fs.readFileSync('Abbadon.html', 'utf-8');
-const Lord = fs.readFileSync('Lord.html', 'utf-8');
+const goldensupreme = fs.readFileSync('html/goldensupreme.html', 'utf-8');
+const grannysmith = fs.readFileSync('html/grannysmith.html', 'utf-8');
+const reddelicious = fs.readFileSync('html/reddelicious.html', 'utf-8');
 
 //--Formulario
-const FORMULARIO_LOGIN = fs.readFileSync('login.html','utf-8');
+const FORMULARIO_LOGIN = fs.readFileSync('html/login.html','utf-8');
 
 //-- Respuesta login
-const RESPUESTA_LOGIN = fs.readFileSync('logueado.html','utf-8');
+const RESPUESTA_LOGIN = fs.readFileSync('html/logueado.html','utf-8');
 
 
 //--Funcion para imprimir información de la petición
@@ -64,7 +64,6 @@ function print_info_req(req) {
     console.log("  Ruta: " + myURL.pathname);
 }
 
-//--Funcion carrito
 function get_carrito(req) {
   //-- Leer la Cookie recibida
   const cookie = req.headers.cookie;
@@ -131,13 +130,13 @@ function get_user(req) {
 function get_productos(carrear){
   let productosCarro = carrear.split(",");
   let tamaño = productosCarro.length;
-  let tiposProd = ["Horus War Lord",0, "Abbadon the despoiler",0, "Lord Invocatus",0];
+  let tiposProd = ["Golden Supreme",0, "Red Delicious",0, "Granny Smith",0];
   for (let i = 0; i < tamaño; i++) {
-      if(productosCarro[i].includes("Horus War Lord")){
+      if(productosCarro[i].includes("Golden Supreme")){
         tiposProd[1] = tiposProd[1]+1;
-      }else if(productosCarro[i].includes("Abbadon the despoiler")){
+      }else if(productosCarro[i].includes("Red Delicious")){
         tiposProd[3] = tiposProd[3]+1;
-      }else if(productosCarro[i].includes("Lord Invocatus")){
+      }else if(productosCarro[i].includes("Granny Smith")){
         tiposProd[5] = tiposProd[5]+1;
       }
   }
@@ -150,22 +149,21 @@ const server = http.createServer((req, res)=>{
     console.log("Petición recibida!");
 
     //-- Mostrar informacion de la peticion
+    //print_info_req(req);
 
     //-- Valores de la respuesta por defecto
     let code = 200;
     let code_msg = "OK";
- 
+    let petition = "";
+    let mimetype = 'text/html';
 
     //-- Construir el objeto url con la url de la solicitud
     const url = new URL(req.url, 'http://' + req.headers['host']);
     console.log("URL (del recurso solicitado): " + url.href)
     console.log("Ruta: ",url.pathname);
 
-    let petition = "";
-    let mimetype = 'text/html';
-
     if (url.pathname == '/') {//-- Si se pide la pagina principal
-      petition = "/Tienda.html"
+      petition = "/html/index.html"
     }else {//-- Si se pide cualquier otra cosa
         petition = url.pathname;
     }
@@ -180,39 +178,39 @@ const server = http.createServer((req, res)=>{
     let login2_BD = tienda[0]['usuarios'][1]['nick'];
     let pass2_BD = tienda[0]['usuarios'][1]['pass'];
 
-    //hORUS
-    let Horus_war = Horus;
+    //Golden Supreme
+    let golden_supreme = goldensupreme;
     info = tienda[1]['productos'][0]['nombre'];
-    Horus_war = Horus_war.replace("NOMBRE", info);
+    golden_supreme = golden_supreme.replace("NOMBRE", info);
     info = tienda[1]['productos'][0]['descripcion'];
-    Horus_war = Horus_war.replace("DESCRIPCION", info);
+    golden_supreme = golden_supreme.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][0]['precio'];
-    Horus_war = Horus_war.replace("PRECIO", info);
+    golden_supreme = golden_supreme.replace("PRECIO", info);
     info = tienda[1]['productos'][0]['stock'];
-    Horus_war = Horus_war.replace("STOCK", info);
+    golden_supreme = golden_supreme.replace("STOCK", info);
 
-    //Abbadon
-    let Abbadon_despoiler= Abbadon;
+    //Granny Smith
+    let granny_smith = grannysmith;
     info = tienda[1]['productos'][1]['nombre'];
-    Abbadon_despoiler = Abbadon_despoiler.replace("NOMBRE", info);
+    granny_smith = granny_smith.replace("NOMBRE", info);
     info = tienda[1]['productos'][1]['descripcion'];
-    Abbadon_despoiler = Abbadon_despoiler.replace("DESCRIPCION", info);
+    granny_smith = granny_smith.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][1]['precio'];
-    Abbadon_despoiler = Abbadon_despoiler.replace("PRECIO", info);
+    granny_smith = granny_smith.replace("PRECIO", info);
     info = tienda[1]['productos'][1]['stock'];
-    Abbadon_despoiler = Abbadon_despoiler.replace("STOCK", info);
+    granny_smith = granny_smith.replace("STOCK", info);
 
 
-    //Lord
-    let Lord_Invocatus = Lord;
+    //Red Delicious
+    let red_delicious = reddelicious;
     info = tienda[1]['productos'][2]['nombre'];
-    Lord_Invocatus = Lord_Invocatus.replace("NOMBRE", info);
+    red_delicious = red_delicious.replace("NOMBRE", info);
     info = tienda[1]['productos'][2]['descripcion'];
-    Lord_Invocatus = Lord_Invocatus.replace("DESCRIPCION", info);
+    red_delicious = red_delicious.replace("DESCRIPCION", info);
     info = tienda[1]['productos'][2]['precio'];
-    Lord_Invocatus = Lord_Invocatus.replace("PRECIO", info);
+    red_delicious = red_delicious.replace("PRECIO", info);
     info = tienda[1]['productos'][2]['stock'];
-    Lord_Invocatus = Lord_Invocatus.replace("STOCK", info);
+    red_delicious = red_delicious.replace("STOCK", info);
 
     //-- Entrega de formulario
     let user = FORMULARIO_LOGIN;
@@ -277,26 +275,27 @@ const server = http.createServer((req, res)=>{
 
     //-- Lectura asincrona de los recursos a mostrar en la pagina
     fs.readFile(petition, (err, data) => {
+      
         if (err) {
             res.statusCode = 404
             res.statusMessage = "Not Found"
-            petition = "error.html";
+            petition = "html/error.html";
             data = fs.readFileSync(petition);
             res.setHeader('Content-Type', mimetype);
             res.write(data);
             return res.end();
-        }else if(petition == "Horus.html"){
-            data = Horus_war;
-            tipoProd = "Horus war lord";
-        }else if(petition == "Abbadon.html"){
-            data = Abbadon_despoiler;
-            tipoProd = "Abbadon the despoiler";
-        }else if(petition == "Lord.html"){
-            data = Lord_Invocatus;
-            tipoProd = "Lord Invocatus";
-        }else if(petition == "logueado.html"){
+        }else if(petition == "./html/goldensupreme.html"){
+            data = golden_supreme;
+            tipoProd = "Golden Supreme";
+        }else if(petition == "./html/grannysmith.html"){
+            data = granny_smith;
+            tipoProd = "Granny Smith";
+        }else if(petition == "./html/reddelicious.html"){
+            data = red_delicious;
+            tipoProd = "Red Delicious";
+        }else if(petition == "./html/logueado.html"){
             data = user;
-        }else if (petition == 'alacesta.html'){
+        }else if (petition == './html/alcarro.html'){
           if (carrear == null) { //-- Si el carro está vacío
             carro = tipoProd;
             res.setHeader('Set-Cookie', "carrito= " + carro);
@@ -308,7 +307,7 @@ const server = http.createServer((req, res)=>{
           }
           data = carrito;
         //-- Finalizar compra 
-        }else if (petition == 'compra.html'){
+        }else if (petition == './html/compra.html'){
           if (user_cookie == null){
             sinlogin = FORMULARIO_LOGIN;
             data = sinlogin;
@@ -401,7 +400,7 @@ const server = http.createServer((req, res)=>{
           }
   
         //-- Home
-        }else if (petition == 'Tienda.html'){
+        }else if (petition == './html/index.html'){
           user = INDEX.replace("IDENTIFICARSE", user_cookie);
           data = user;
         }
