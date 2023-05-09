@@ -42,3 +42,10 @@ let posUser = "";
 app.get('/', (req, res) => {
     res.send('<p style = "text-align: center; margin-top: 20%;">¡Bienvenid@! </p>' + '<p style = "text-align: center; vertical-align: middle;"><a href="/chat.html">Entrar al chat</a></p>');
   });
+
+//-- Esto es necesario para que el servidor le envíe al cliente la
+//-- biblioteca socket.io para el cliente
+app.use('/', express.static(__dirname +'/'));
+
+//-- El directorio publico contiene ficheros estáticos
+app.use(express.static('public'));
