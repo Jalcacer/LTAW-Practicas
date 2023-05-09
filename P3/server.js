@@ -83,5 +83,8 @@ io.on('connect', (socket) => {
     usuario: "undefined"
     }
 
-    
+    identificadores.push(identificador)
+    let data = JSON.stringify(identificadores);
+    fs.writeFileSync(FICHERO_JSON_OUT, data);
+
 });
