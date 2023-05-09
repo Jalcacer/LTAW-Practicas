@@ -127,8 +127,6 @@ io.on('connect', (socket) => {
                          +"/date: Nos devolverá la fecha" + "</p>");
   }else if (msg == "/list"){
 
-  }else if (msg == "/list") { 
-
   }else if (msg == "/hello") {
 
   }else if (msg == "/date") {
@@ -136,7 +134,7 @@ io.on('connect', (socket) => {
   }else if (msg.startsWith("/")) {  
 
   }else if (msg.startsWith("USUARIO:")) { 
-    
+
   }
 });
 });
