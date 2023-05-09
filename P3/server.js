@@ -87,4 +87,16 @@ io.on('connect', (socket) => {
     let data = JSON.stringify(identificadores);
     fs.writeFileSync(FICHERO_JSON_OUT, data);
 
+    //-- Evento de desconexión
+    socket.on('disconnect', function(){
+    console.log('** CONEXIÓN TERMINADA **'.yellow);
+
+    if (numUsuarios > 0){
+      numUsuarios = numUsuarios--;
+      console.log("Número de usuarios: " + numUsuarios);
+      //-- Mensaje de nuevo usuario desconectado
+      io.send("¡Usuario desconectado!");
+    }
+  });  
+
 });
