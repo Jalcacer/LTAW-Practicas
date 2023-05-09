@@ -97,6 +97,28 @@ io.on('connect', (socket) => {
       //-- Mensaje de nuevo usuario desconectado
       io.send("¡Usuario desconectado!");
     }
-  });  
+  });
 
+  //-- Mensaje recibido: Reenviarlo a todos los clientes conectados
+  socket.on("message", (msg)=> {
+    let banderaSocketId = socket.id;
+    for (let i = 0; i < identificadores.length; i++) {
+      if(identificadores[i]["socket_id"].includes(socket.id)){
+         colorLetras = identificadores[i]["color"];
+         posUser = i;
+      }
+     }
+
+    //--Fecha y hora en la que se recibe el mensaje
+  h = fecha.getHours();
+  if (h < 10){
+      h = "0" + h;
+    }
+  if (m < 10){
+      m = "0" + m;
+    }
+  m = fecha.getMinutes();
+  let hora = h+':'+ m;
+  console.log("Mensaje Recibido!: " + msg.blue);
+});
 });
