@@ -120,5 +120,23 @@ io.on('connect', (socket) => {
   m = fecha.getMinutes();
   let hora = h+':'+ m;
   console.log("Mensaje Recibido!: " + msg.blue);
+  if (msg == "/help"){
+    socket.send("</p>" + "/help: Mostrará una lista con todos los comandos soportados" + "</p>" 
+                         + "/list: Devolverá el número de usuarios conectados" + "</p>" 
+                         + "/hello: El servidor nos devolverá el saludo" + "</p>" 
+                         +"/date: Nos devolverá la fecha" + "</p>");
+  }else if (msg == "/list"){
+
+  }else if (msg == "/list") { 
+
+  }else if (msg == "/hello") {
+
+  }else if (msg == "/date") {
+
+  }else if (msg.startsWith("/")) {  
+
+  }else if (msg.startsWith("USUARIO:")) { 
+    
+  }
 });
 });
