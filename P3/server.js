@@ -126,15 +126,18 @@ io.on('connect', (socket) => {
                          + "/hello: El servidor nos devolverá el saludo" + "</p>" 
                          +"/date: Nos devolverá la fecha" + "</p>");
   }else if (msg == "/list"){
-
+    socket.send("Número de usuarios conectados: " + numUsuarios);
   }else if (msg == "/hello") {
-
+    socket.send("Hola, soy el servidor!");
   }else if (msg == "/date") {
-
+    //--Fecha en formato cadena
+    socket.send(fecha.toDateString());
   }else if (msg.startsWith("/")) {  
-
-  }else if (msg.startsWith("USUARIO:")) { 
-
+    socket.send("No se reconoce el comando");
+  }else if (msg.startsWith("USUARIO:")){ 
+    identificadores[posUser]['usuario'] = msg.split(":")[1];
+    let cadena = "<p style='font-style: oblique;'>" + identificadores[posUser]['usuario'] + " se unió al chat" + "</p>";
+    io.send(cadena)
   }
 });
 });
