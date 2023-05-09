@@ -71,4 +71,17 @@ io.on('connect', (socket) => {
 
     //-- Usuario conectado. Imprimir el identificador de su socket
     console.log('Socket id: ' + socket.id);
+
+    //-- Añadir un usuario
+    numUsuarios = numUsuarios++;
+    console.log("Número de usuarios: " + numUsuarios);
+
+    //--Almacenar en fichero json
+    let identificador = { 
+    socket_id: socket.id,
+    color: randomColor,
+    usuario: "undefined"
+    }
+
+    
 });
