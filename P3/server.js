@@ -54,4 +54,21 @@ app.use(express.static('public'));
 //-- Evento: Nueva conexion recibida
 io.on('connect', (socket) => {
 
+    colorLetras = "";
+    posUser = "";
+
+    var letters = '0123456789ABCD';
+    var randomColor = '#';
+
+    for (var i = 0; i < 6; i++) {
+        randomColor += letters[Math.floor(Math.random() * 16)];
+      }
+    //--From http://stackoverflow.com/a/5365036/2065702
+    randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
+
+    fecha = new Date(tiempo);
+    console.log('** NUEVA CONEXIÓN **'.yellow);
+
+    //-- Usuario conectado. Imprimir el identificador de su socket
+    console.log('Socket id: ' + socket.id);
 });
