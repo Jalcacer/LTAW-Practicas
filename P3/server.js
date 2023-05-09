@@ -35,3 +35,10 @@ let identificadores = [];
 //--Color letras
 let colorLetras = "";
 let posUser = "";
+
+//-------- PUNTOS DE ENTRADA DE LA APLICACION WEB
+//-- Definir el punto de entrada principal de mi aplicación web
+
+app.get('/', (req, res) => {
+    res.send('<p style = "text-align: center; margin-top: 20%;">¡Bienvenid@! </p>' + '<p style = "text-align: center; vertical-align: middle;"><a href="/chat.html">Entrar al chat</a></p>');
+  });
