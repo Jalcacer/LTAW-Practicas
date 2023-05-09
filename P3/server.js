@@ -92,16 +92,17 @@ io.on('connect', (socket) => {
     console.log('** CONEXIÓN TERMINADA **'.yellow);
 
     if (numUsuarios > 0){
-      console.log("Número de usuarios: " + numUsuarios - 1 );
+      numUsuarios = numUsuarios - 1;
+      //console.log("Número de usuarios: " + numUsuarios);
       //-- Mensaje de nuevo usuario desconectado
-      if (numUsuarios = 0){
+      console.log('Un usuario se ha desconectado'.red);
+      console.log("Número de usuarios: " + numUsuarios);
+      io.send("¡Usuario desconectado!");
+    }else if (numUsuarios = 0){
         console.log('Un usuario se ha desconectado'.red);
         console.log("Número de usuarios: 0" );
         io.send("¡Usuario desconectado!");
       }
-      console.log('Un usuario se ha desconectado'.red);
-      io.send("¡Usuario desconectado!");
-    }
   });
 
   //-- Mensaje recibido: Reenviarlo a todos los clientes conectados
