@@ -21,7 +21,6 @@ socket.on("message", (msg)=>{
 
   user_entry.onchange = () => {
     if (user_entry.value)
-      C
       user_entry.style.visibility='hidden';
       sendUser.style.visibility='hidden';
       user_entry.style.display='none';
@@ -31,7 +30,7 @@ socket.on("message", (msg)=>{
     //-- Borrar el mensaje actual
     user_entry.value = "";
   }
-  
+
 //-- Al apretar el botón se envía un mensaje al servidor
 msg_entry.onchange = () => {
     if (msg_entry.value)
