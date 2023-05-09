@@ -73,7 +73,7 @@ io.on('connect', (socket) => {
     console.log('Socket id: ' + socket.id);
 
     //-- Añadir un usuario
-    numUsuarios = numUsuarios++;
+    numUsuarios = numUsuarios + 1;
     console.log("Número de usuarios: " + numUsuarios);
 
     //--Almacenar en fichero json
@@ -92,9 +92,14 @@ io.on('connect', (socket) => {
     console.log('** CONEXIÓN TERMINADA **'.yellow);
 
     if (numUsuarios > 0){
-      numUsuarios = numUsuarios--;
-      console.log("Número de usuarios: " + numUsuarios);
+      console.log("Número de usuarios: " + numUsuarios - 1 );
       //-- Mensaje de nuevo usuario desconectado
+      if (numUsuarios = 0){
+        console.log('Un usuario se ha desconectado'.red);
+        console.log("Número de usuarios: 0" );
+        io.send("¡Usuario desconectado!");
+      }
+      console.log('Un usuario se ha desconectado'.red);
       io.send("¡Usuario desconectado!");
     }
   });
