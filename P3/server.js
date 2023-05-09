@@ -25,3 +25,13 @@ let fecha = "";
 
 var h = "";
 var m = "";
+
+//--Numero de usuarios
+let numUsuarios = 0;
+
+//--Array identificadores
+let identificadores = [];
+
+//--Color letras
+let colorLetras = "";
+let posUser = "";
