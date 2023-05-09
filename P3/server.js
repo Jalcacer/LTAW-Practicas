@@ -15,3 +15,13 @@ const server = http.Server(app);
 
 //-- Crear el servidor de websockets, asociado al servidor http
 const io = socket(server);
+
+//-- Nombre del fichero JSON a escribir
+const FICHERO_JSON_OUT = "ids.json"
+
+//-- Constante para la fecha
+const tiempo = Date.now();
+let fecha = "";
+
+var h = "";
+var m = "";
