@@ -138,6 +138,8 @@ io.on('connect', (socket) => {
     identificadores[posUser]['usuario'] = msg.split(":")[1];
     let cadena = "<p style='font-style: oblique;'>" + identificadores[posUser]['usuario'] + " se unió al chat" + "</p>";
     io.send(cadena)
+    let usuariosActivos = "<p style='font-style: oblique;'> Usuarios chat: ";
+    
   }
 });
 });
