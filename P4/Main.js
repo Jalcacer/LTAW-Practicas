@@ -68,7 +68,7 @@ io.on('connect', (socket) => {
     for (var i = 0; i < 6; i++) {
       randomColor += letters[Math.floor(Math.random() * 16)];
     }
-    
+
     //--From http://stackoverflow.com/a/5365036/2065702
     randomColor = "#"+((1<<24)*Math.random()|0).toString(16);
 
@@ -199,7 +199,25 @@ electron.app.on('ready', () => {
       contextIsolation: false
     }
   });
+
+//-- Esperar a recibir los mensajes de botón apretado (Test) del proceso de 
+//-- renderizado. Al recibirlos se escribe una cadena en la consola
+electron.ipcMain.handle('test', (event, msg) => {
+  console.log("-> Mensaje: " + msg);
 });
+win.setMenuBarVisibility(false)
+
+//-- Cargar contenido web en la ventana
+win.loadFile("index.html");
+
+//-- Esperar a que la página se cargue y se muestre
+win.on('ready-to-show', () => {
+    let msg_IP = "http://" + dir_ip + ":" + PUERTO + "/chat.html";
+  win.webContents.send('ip', msg_IP);
+  console.log(msg_IP.red);
+});
+});
+
 //-- Esperar a recibir los mensajes de botón apretado (Test) del proceso de 
 //-- renderizado. Al recibirlos se escribe una cadena en la consola
 electron.ipcMain.handle('test', (event, msg) => {
