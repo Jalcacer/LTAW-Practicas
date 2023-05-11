@@ -1,7 +1,10 @@
+body{
+    background-color: beige;
+}
 h1 {
     width: auto;
     padding: 20px;
-    background-color: rgb(203, 220, 177);
+    background-color: #08a72f;
     border-radius: 2px;
     text-align: center;
     border-style: solid;
@@ -20,7 +23,7 @@ h1 {
 }
 
 #infoIP {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #msgs{
