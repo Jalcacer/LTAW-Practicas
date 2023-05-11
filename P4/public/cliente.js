@@ -21,7 +21,7 @@ socket.on("message", (msg)=>{
 
   user_entry.onchange = () => {
     if (user_entry.value)
-      
+      socket.send("USUARIO:" + user_entry.value);
       user_entry.style.visibility='hidden';
       sendUser.style.visibility='hidden';
       user_entry.style.display='none';
