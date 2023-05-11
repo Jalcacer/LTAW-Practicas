@@ -1,7 +1,7 @@
 {
     "name": "practica-3",
     "description": "Proyecto Websockets: CHAT",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "author": "Jorge Alcácer (yoryo)",
     "main": "server.js",
     "license": "GPL-3.0",
