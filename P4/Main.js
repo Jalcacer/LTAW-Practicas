@@ -1,3 +1,5 @@
+ //-- Cargar el módulo de electron
+ const electron = require('electron');
 //-- Cargar las dependencias
 const socket = require('socket.io');
 const http = require('http');
@@ -35,6 +37,9 @@ let identificadores = [];
 //--Color letras
 let colorLetras = "";
 let posUser = "";
+
+//-- Dirección IP
+let dir_ip = ip.address();
 
 //-------- PUNTOS DE ENTRADA DE LA APLICACION WEB
 //-- Definir el punto de entrada principal de mi aplicación web
@@ -75,6 +80,9 @@ io.on('connect', (socket) => {
     //-- Añadir un usuario
     numUsuarios = numUsuarios + 1;
     console.log("Número de usuarios: " + numUsuarios);
+
+    //Enviar a la ventana (index.js)
+    win.webContents.send('infoUSERS',numUsuarios);
 
     //--Almacenar en fichero json
     let identificador = { 
