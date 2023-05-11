@@ -167,13 +167,13 @@ io.on('connect', (socket) => {
     usuariosActivos += "</p>";
     io.send(usuariosActivos)
   }else {
-  //-- Reenviarlo a todos los clientes conectados
+  //-- Reenviarlo a todos los clientes conectados por la ventana (index.js)
       
+  msgForApp = '<p id="nombreUsuario" style="color:' + colorLetras + ';font-weight: bolder;">' + identificadores[posUser]['usuario'] + ":" + msg + "(" + hora + ")</p>";
+  win.webContents.send('msgs',msgForApp);
   msg = '<div class="mensaje">' + '<p id="nombreUsuario" style="color:' + colorLetras + ';font-weight: bolder;">' + identificadores[posUser]['usuario'] + '</p>' + msg + '</div> ' + '<span id="hora">' + hora + '</span>' + " ////" + socket.id;
-      
-      
-  console.log("Mensaje Recibido!: " + msg.blue);
-  io.send(msg);
+  console.log("Mensaje Recibido!: " + msgForApp.blue);
+  io.send(msg);    
  }
 });
 
