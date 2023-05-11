@@ -22,3 +22,30 @@ h1 {
 #infoIP {
     font-size: 20px;
 }
+
+#msgs{
+    background-color: maroon;
+    border-radius: 2px;
+    border-style: solid;
+    width: 58%;
+    display: inline-block;
+    margin-left: 4px;  
+}
+
+#info_sistema{
+    float: left;
+    background-color: lightblue;
+    border-radius: 2px;
+    border-style: solid;
+    width: 34%;
+    height: auto;
+    margin-left: 3px;
+    padding: 4px;
+    font-size: 15px;
+}
+
+#infoUSERS {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
