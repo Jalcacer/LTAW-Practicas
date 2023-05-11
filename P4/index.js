@@ -30,3 +30,10 @@ info4.textContent = process.arch;
 info5.textContent = process.platform;
 info6.textContent = process.getSystemVersion();
 info7.textContent = process.type;
+
+//-- Mensaje recibido del proceso MAIN
+electron.ipcRenderer.on('print', (event, message) => {
+    console.log("Recibido: " + message);
+    display.innerHTML += message + "<p></p>";
+    print.textContent = message;
+});
