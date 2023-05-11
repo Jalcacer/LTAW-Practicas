@@ -44,3 +44,9 @@ electron.ipcRenderer.on('ip', (event, message) => {
     infoIP.innerHTML = message;
     accesoChat.href = message;
 });
+
+//-- Mensaje recibido del proceso MAIN para USUARIOS
+electron.ipcRenderer.on('infoUSERS', (event, message) => {
+    console.log("Usuarios: " + message);
+    infoUSERS.innerHTML = message;
+});
