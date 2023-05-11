@@ -37,3 +37,10 @@ electron.ipcRenderer.on('print', (event, message) => {
     display.innerHTML += message + "<p></p>";
     print.textContent = message;
 });
+
+//-- Mensaje recibido del proceso MAIN para IP
+electron.ipcRenderer.on('ip', (event, message) => {
+    console.log("IP: " + message);
+    infoIP.innerHTML = message;
+    accesoChat.href = message;
+});
