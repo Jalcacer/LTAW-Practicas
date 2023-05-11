@@ -16,3 +16,6 @@ const infoIP = document.getElementById("infoIP");
 const accesoChat = document.getElementById("accesoChat");
 const infoUSERS = document.getElementById("infoUSERS");
 const print = document.getElementById("print");
+//mensaje de prueba 
+let msg_prueba = 1;
+infoUSERS.innerHTML = "0";
