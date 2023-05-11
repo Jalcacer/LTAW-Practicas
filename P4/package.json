@@ -1,0 +1,16 @@
+{
+    "name": "mi-electron-app",
+    "description": "Esta es mi aplicacion CHAT de escritorio con Electron",
+    "version": "0.0.1",
+    "main": "Main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "dependencies": {
+        "colors": "^1.4.0",
+        "electron": "^18.2.3",
+        "express": "^4.18.1",
+        "ip": "^1.1.8",
+        "socket.io": "^4.5.0"
+    }
+}
