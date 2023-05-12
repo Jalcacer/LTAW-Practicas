@@ -11,10 +11,14 @@ Para añadir un producto a la cesta es necesario acceder con alguno de los usuar
 En cualquier momento podremos regresar a la página principal a través del enlace correspondiente.
 
 Podremos consultar los productos y la cantidad de estos en el carrito y finzalizar posteriormente el pedido.
-
+***
 **DOCUMENTACIÓN TÉCNICA**
 
 El servidor de chat utiliza la tecnología NODE.
+
+Para desplegar el chat es necesario importar los siguientes modulos:
+* http
+* fs
 
 El chat se despliega en el PUERTO 9000 de la direccion de IP local.
 
@@ -35,13 +39,9 @@ Descripción de los ficheros (organizados por carpetas por tipo de archivo)
     * html/Abbadon.html: página deproducto 2
     * html/Lord.html: página de producto 3
     
-
 * json:
     * json/pedidos.json: pedidos e informacion relativa
     * json/tienda.json:BBDD de la tienda
 
 * imagenes: contiene las imagenes utilizadas
 
-Para desplegar el chat es necesario importar los siguientes modulos:
-* http
-* fs
